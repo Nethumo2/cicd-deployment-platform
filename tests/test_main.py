@@ -9,3 +9,8 @@ def test_health():
     response = client.get("/health")
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
+
+def test_get_item_not_found():
+    response = client.get("/items/99")
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Item not found"}    
