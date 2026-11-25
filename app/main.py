@@ -16,7 +16,7 @@ def health():
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to the CI/CD Demo App"}
+    return {"message": "Welcome To the CI/CD Demo App"}
 
 
 @app.get("/items/{item_id}")
